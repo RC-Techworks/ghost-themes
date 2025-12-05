@@ -1,0 +1,11 @@
+/* Synthwave-ish code colors */
+.post-content pre, .post-content code { background: var(--code-bg); color: #d6f6ff; }
+.post-content pre { border: 1px solid var(--border-subtle); box-shadow: inset 0 0 0 1px rgba(0,255,255,0.05); }
+.post-content code { padding: 0 4px; border-radius: 4px; }
+
+.token.comment { color: #6c7a89; }
+.token.string { color: #00ffc8; }
+.token.keyword { color: #ff00ff; }
+.token.function { color: #00b8ff; }
+.token.number { color: #ffc400; }
+.token.operator { color: #b0b0b0; }

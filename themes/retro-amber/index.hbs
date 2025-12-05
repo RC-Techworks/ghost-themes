@@ -1,0 +1,19 @@
+{{!< default}}
+<section class="header-boot">
+  {{#if @site.description}}{{@site.description}}{{else}}SYSTEM LOADING... MEMORY CHECK: OK // BLOG.SYS LOADED █{{/if}}
+</section>
+{{> navigation}}
+<div class="listing">
+  <div class="list-row list-head">
+    <span>POST#</span><span>DATE</span><span>TITLE</span><span>STATUS</span>
+  </div>
+  {{#foreach posts}}
+    <a class="list-row" href="{{url}}">
+      <span>{{@number}}</span>
+      <span>{{date published_at format="YY/MM/DD"}}</span>
+      <span>{{title}}</span>
+      <span class="status">[READ]</span>
+    </a>
+  {{/foreach}}
+</div>
+<div class="pagination-bar">{{pagination}}</div>

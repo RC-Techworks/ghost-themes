@@ -1,0 +1,40 @@
+{{!< default}}
+{{#post}}
+<article class="post-article">
+    {{#if feature_image}}
+        <figure class="post-hero">
+            <img src="{{img_url feature_image size="l"}}" alt="{{title}}" loading="lazy" />
+            <div class="hero-glow"></div>
+        </figure>
+    {{/if}}
+
+    <header class="post-header">
+        <div class="post-meta">
+            <span class="meta-item">{{date published_at format="YYYY MMM DD"}}</span>
+            <span class="meta-dot">•</span>
+            <span class="meta-item">{{reading_time}} read</span>
+            {{#if tags}}
+                <span class="meta-dot">•</span>
+                <span class="meta-item tags">
+                    {{tags separator=", "}}
+                </span>
+            {{/if}}
+        </div>
+        <h1 class="post-title">{{title}}</h1>
+    </header>
+
+    <div class="post-content">
+        {{content}}
+    </div>
+
+    <footer class="post-footer">
+        <a class="back-link" href="/">← Back to grid</a>
+        <div class="share-inline">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?url={{url absolute="true"}}&text={{title}}" target="_blank" rel="noopener">X</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{url absolute="true"}}" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:?subject={{title}}&body={{url absolute="true"}}">Email</a>
+        </div>
+    </footer>
+</article>
+{{/post}}

@@ -1,0 +1,13 @@
+{{!< default}}
+{{#post}}
+<article class="post-article">
+  <div class="post-meta">root@blog:~$ cat {{slug}}.md | {{date published_at format="YYYY-MM-DD"}} | {{reading_time}} read</div>
+  <h1 class="post-title">{{title}}</h1>
+  <hr class="separator" />
+  <div class="post-content">
+    {{content}}
+  </div>
+  <hr class="separator" />
+  <div class="post-meta">root@blog:~$ echo "end of file"</div>
+</article>
+{{/post}}

@@ -1,0 +1,20 @@
+<header class="site-header">
+    <div class="banner" style="--banner-url: url('{{#if @site.cover_image}}{{img_url @site.cover_image size="xl"}}{{else}}/assets/images/default-banner.jpg{{/if}}')">
+        <div class="banner-grid"></div>
+        <div class="banner-overlay"></div>
+        <div class="banner-inner">
+            <div class="logo-stack">
+                {{#if @site.logo}}
+                    <img class="logo-image" src="{{img_url @site.logo size="s"}}" alt="{{@site.title}}" loading="lazy" />
+                {{else}}
+                    <div class="logo-pixel">{{@site.title}}</div>
+                    {{#if @site.description}}<div class="logo-sub">{{@site.description}}</div>{{/if}}
+                {{/if}}
+            </div>
+            {{#if @site.description}}
+                <p class="banner-tagline">{{@site.description}}</p>
+            {{/if}}
+        </div>
+    </div>
+    {{> "navigation"}}
+</header>

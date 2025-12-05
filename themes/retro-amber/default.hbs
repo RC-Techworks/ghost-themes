@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{meta_title}}</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{{asset "css/global.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/layout.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/components.css"}}" />
+    <link rel="stylesheet" href="{{asset "css/syntax.css"}}" />
+
+    {{ghost_head}}
+</head>
+<body class="neon-grid {{body_class}}">
+    <div class="scan-overlay"></div>
+    {{> "header"}}
+    <main class="site-main" id="content">
+        {{{body}}}
+    </main>
+    {{> "footer"}}
+
+    <script src="{{asset "js/main.js"}}"></script>
+    {{ghost_foot}}
+</body>
+</html>

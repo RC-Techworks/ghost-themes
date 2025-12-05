@@ -1,0 +1,17 @@
+{{!< default}}
+<section class="content-wrap">
+    <div class="grid-header">
+        <div class="grid-title">Latest Signals</div>
+        <p class="grid-subtitle">fresh drops from the Your Site stack</p>
+    </div>
+
+    <div class="post-grid">
+        {{#foreach posts}}
+            {{> "post-card"}}
+        {{/foreach}}
+    </div>
+
+    <div class="pagination-bar">
+        {{pagination}}
+    </div>
+</section>

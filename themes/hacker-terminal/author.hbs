@@ -1,0 +1,33 @@
+{{!< default}}
+<section class="content-wrap">
+    <header class="archive-header author">
+        <div class="author-avatar">
+            {{#if primary_author.profile_image}}
+                <img src="{{img_url primary_author.profile_image size="s"}}" alt="{{primary_author.name}}" loading="lazy" />
+            {{else}}
+                <div class="avatar-fallback">{{primary_author.name.[0]}}</div>
+            {{/if}}
+        </div>
+        <div>
+            <p class="eyebrow">Author</p>
+            <h1 class="archive-title">{{primary_author.name}}</h1>
+            {{#if primary_author.bio}}
+                <p class="archive-description">{{primary_author.bio}}</p>
+            {{/if}}
+            <div class="author-meta">
+                {{#if primary_author.location}}<span>{{primary_author.location}}</span>{{/if}}
+                {{#if primary_author.website}}<span>•</span><a href="{{primary_author.website}}" target="_blank" rel="noopener">Website</a>{{/if}}
+            </div>
+        </div>
+    </header>
+
+    <div class="post-grid">
+        {{#foreach posts}}
+            {{> "post-card"}}
+        {{/foreach}}
+    </div>
+
+    <div class="pagination-bar">
+        {{pagination}}
+    </div>
+</section>

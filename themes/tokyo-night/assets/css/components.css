@@ -1,0 +1,27 @@
+.card { position: relative; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 10px; overflow: hidden; transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; height: 100%; }
+.card::before { content: \"\"; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: linear-gradient(180deg, var(--accent-blue), var(--accent-red)); }
+.card-link { color: inherit; height: 100%; display: flex; flex-direction: column; }
+.card:hover { transform: translateY(-4px); border-color: var(--accent-blue); box-shadow: var(--shadow-neon); }
+.card-media { position: relative; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
+.card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-media-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.45)); }
+.card-body { padding: 18px; display: grid; gap: 10px; flex: 1; }
+.card-meta { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); opacity: 0.8; flex-wrap: wrap; }
+.card-meta .dot { opacity: 0.6; }
+.pill { padding: 4px 8px; border-radius: 999px; background: linear-gradient(90deg, rgba(122,162,247,0.2), rgba(247,118,142,0.2)); color: var(--text-heading); font-size: 12px; letter-spacing: 0.3px; }
+.pill-small { font-size: 11px; opacity: 0.85; }
+.card-title { margin: 0; font-family: var(--font-head); color: var(--text-heading); font-size: 22px; line-height: 1.3; }
+.card-excerpt { margin: 0; color: var(--text-primary); opacity: 0.85; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.tag-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.read-more { color: var(--accent-blue); font-weight: 600; }
+
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border-subtle); background: var(--bg-card); color: var(--text-primary); }
+.btn:hover { border-image: linear-gradient(90deg, var(--accent-blue), var(--accent-red)) 1; box-shadow: var(--shadow-neon); }
+
+.nav-open .nav-links { display: flex !important; flex-direction: column; gap: 10px; background: rgba(26,27,38,0.95); position: absolute; top: 52px; right: 20px; padding: 14px 16px; border: 1px solid var(--border-subtle); border-radius: 10px; }
+
+.banner-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(122,162,247,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(247,118,142,0.07) 1px, transparent 1px); background-size: 24px 24px; opacity: 0.4; }
+.banner-overlay { position: absolute; inset: 0; backdrop-filter: blur(1px); }
+
+.hero-glow, .card:hover .card-media-overlay { pointer-events: none; }

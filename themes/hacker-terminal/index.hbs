@@ -1,0 +1,19 @@
+{{!< default}}
+<section class="header-boot">
+  [root@blog ~]$ ls posts
+</section>
+{{> navigation}}
+<div class="listing">
+  <div class="list-row list-head">
+    <span>[ID]</span><span>DATE</span><span>TITLE</span><span>CMD</span>
+  </div>
+  {{#foreach posts}}
+    <a class="list-row" href="{{url}}">
+      <span>[{{@number}}]</span>
+      <span>{{date published_at format="YYYY-MM-DD"}}</span>
+      <span>{{title}}</span>
+      <span class="status">[ENTER]</span>
+    </a>
+  {{/foreach}}
+</div>
+<div class="pagination-bar">{{pagination}}</div>

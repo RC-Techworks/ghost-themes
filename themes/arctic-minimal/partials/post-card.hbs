@@ -1,0 +1,29 @@
+<article class="card">
+    <a class="card-link" href="{{url}}">
+        {{#if feature_image}}
+            <div class="card-media">
+                <img src="{{img_url feature_image size="m"}}" alt="{{title}}" loading="lazy" />
+                <div class="card-media-overlay"></div>
+            </div>
+        {{/if}}
+        <div class="card-body">
+            <div class="card-meta">
+                <span>{{date published_at format="YYYY MMM DD"}}</span>
+                {{#if primary_tag}}
+                    <span class="dot">•</span>
+                    <span class="pill">{{primary_tag.name}}</span>
+                {{/if}}
+            </div>
+            <h2 class="card-title">{{title}}</h2>
+            <p class="card-excerpt">{{excerpt words="28"}}</p>
+            <div class="card-footer">
+                <div class="tag-pills">
+                    {{#foreach tags limit="3"}}
+                        <span class="pill pill-small">{{name}}</span>
+                    {{/foreach}}
+                </div>
+                <span class="read-more">Read more →</span>
+            </div>
+        </div>
+    </a>
+</article>

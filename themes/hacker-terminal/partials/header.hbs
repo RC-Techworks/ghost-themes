@@ -1,0 +1,7 @@
+<header class="header-boot">
+  {{#if @site.title}}
+    [root@blog ~]$ echo "{{@site.title}}"
+  {{else}}
+    [root@blog ~]$ cat blog.txt
+  {{/if}}
+</header>
