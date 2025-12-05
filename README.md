@@ -72,7 +72,7 @@ Each theme uses CSS custom properties for easy customization. Edit the `assets/c
 
 ## Structure
 
-\`\`\`
+```
 theme-name/
 ├── assets/
 │   ├── css/
@@ -92,10 +92,8 @@ theme-name/
 ├── tag.hbs                 # Tag archives
 ├── author.hbs              # Author pages
 └── package.json            # Theme metadata
-\`\`\`
+```
 
 ## License
 
 MIT License - feel free to use, modify, and distribute.
-
-
