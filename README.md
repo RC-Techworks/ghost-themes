@@ -97,3 +97,5 @@ theme-name/
 ## License
 
 MIT License - feel free to use, modify, and distribute.
+---
+Themes developed for [blog.rain-city.tech](https://blog.rain-city.tech)
